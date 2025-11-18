@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "crispy_forms",
     "catalog",
 ]
 
@@ -128,7 +129,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-# STATICFILES_DIRS = (BASE_DIR / "static",)
+STATICFILES_DIRS = (BASE_DIR / "static",)
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
