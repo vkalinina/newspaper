@@ -4,7 +4,7 @@
 {% block content %}
     <h1>
       Redactor List
-      <a href="{% url 'taxi:redactor-create' %}" class="btn btn-primary link-to-page">
+      <a href="{% url 'catalog:redactor-create' %}" class="btn btn-primary link-to-page">
         Create
       </a>
     </h1>
@@ -28,12 +28,12 @@
         <td>{{ redactor.id }}</td>
         <td>
           <a href="{{ redactor.get_absolute_url }}">
-            {{ driver.username }} {% if user == redactor %} (Me){% endif %}
+            {{ redactor.username }} {% if user == redactor %} (Me){% endif %}
           </a>
         </td>
         <td>{{ redactor.first_name }}</td>
         <td>{{ redactor.last_name }}</td>
-        <td>{{ redactor.license_number }}</td>
+        <td>{{ redactor.years_of_experience }}</td>
       </tr>
     {% endfor %}
 
