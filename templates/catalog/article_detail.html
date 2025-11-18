@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    {{ article.model }}
+    <a href="{% url 'catalog:article-delete' pk=article.id %}" class="btn btn-danger link-to-page">
+      Delete
+    </a>
+
+    <a href="{% url 'catalog:article-update' pk=article.id %}" class="btn btn-secondary link-to-page">
+      Update
+    </a>
+  </h1>
+  <p><i>Topic: {{ article.topic.name }}</i></p>
+  <p><i>Published date: {{ article.published_date }}</i></p>
+  <br>
+  <p>Content:/p>
+  <p>{{ article.content }}</p>
+  <h1>
+    Redactors
+
+    {% if article in user.articles.all %}
+      <a href="{% url 'catalog:toggle-article-assign' pk=article.id %}" class="btn btn-danger link-to-page">
+        Delete me from this article
+      </a>
+    {% else %}
+      <a href="{% url 'catalog:toggle-article-assign' pk=article.id %}" class="btn btn-success link-to-page">
+        Assign me from this article
+      </a>
+    {% endif %}
+
+  </h1>
+  <hr>
+  <ul>
+    {% for redactor in article.redactors.all %}
+      <li>{{ redactor.username }} ({{ redactor.first_name }} {{ redactor.last_name }})</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <h1>
+    Article list
+    <a href="{% url 'catalog:article-create' %}" class="btn btn-primary link-to-page">
+      Create
+    </a>
+  </h1>
+  
+  <form method="get" action="" class="form-inline">
+    {{ search_form|crispy }}
+    <input type="submit" value="🔍" class="btn btn-secondary">
+  </form>
+
+  
+  {% if article_list %}
+    <ul>
+      {% for article in article_list %}
+        <li>
+          <a href="{% url "catalog:article-detail" pk=article.id %} ">{{ article.id }} {{ article.title }}</a>
+          {{ article.published_date }} ({{ article.topic.name }})
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no articles in the newspaper</p>
+  {% endif %}
+{% endblock %}
