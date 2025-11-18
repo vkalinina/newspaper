@@ -6,14 +6,14 @@ from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Redactor, Article, Topic
-# from .forms import (
-#     RedactorCreationForm,
-#     RedactorLicenseUpdateForm,
-#     ArticleForm,
-#     RedactorSearchForm,
-#     ArticleSearchForm,
-#     TopicSearchForm
-# )
+from .forms import (
+    RedactorCreationForm,
+    RedactorExperienceUpdateForm,
+    ArticleForm,
+    RedactorSearchForm,
+    ArticleSearchForm,
+    TopicSearchForm
+)
 
 
 @login_required
@@ -48,9 +48,9 @@ class TopicListView(LoginRequiredMixin, generic.ListView):
     ):
         context = super(TopicListView, self).get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
-        # context["search_form"] = TopicSearchForm(
-        #     initial={"name": name},
-        # )
+        context["search_form"] = TopicSearchForm(
+            initial={"name": name},
+        )
         return context
 
     def get_queryset(self):
@@ -87,9 +87,9 @@ class ArticleListView(LoginRequiredMixin, generic.ListView):
     ):
         context = super(ArticleListView, self).get_context_data(**kwargs)
         model = self.request.GET.get("model", "")
-        # context["search_form"] = ArticleSearchForm(
-        #     initial={"model": model}
-        # )
+        context["search_form"] = ArticleSearchForm(
+            initial={"model": model}
+        )
         return context
 
     def get_queryset(self):
@@ -106,17 +106,17 @@ class ArticleDetailView(LoginRequiredMixin, generic.DetailView):
 
 class ArticleCreateView(LoginRequiredMixin, generic.CreateView):
     model = Article
-    # form_class = ArticleForm
+    form_class = ArticleForm
     success_url = reverse_lazy("catalog:article-list")
 
 
 class ArticleUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Article
-    # form_class = ArticleForm
+    form_class = ArticleForm
     success_url = reverse_lazy("catalog:article-list")
 
 
-class CarDeleteView(LoginRequiredMixin, generic.DeleteView):
+class ArticleDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Article
     success_url = reverse_lazy("catalog:article-list")
 
@@ -130,9 +130,9 @@ class RedactorListView(LoginRequiredMixin, generic.ListView):
     ):
         context = super(RedactorListView, self).get_context_data(**kwargs)
         username = self.request.GET.get("username", "")
-        # context["search_form"] = RedactorSearchForm(
-        #     initial={"username": username}
-        # )
+        context["search_form"] = RedactorSearchForm(
+            initial={"username": username}
+        )
         return context
 
     def get_queryset(self):
@@ -148,15 +148,15 @@ class RedactorDetailView(LoginRequiredMixin, generic.DetailView):
     queryset = Redactor.objects.all().prefetch_related("articles__redactors")
 
 
-class DriverCreateView(LoginRequiredMixin, generic.CreateView):
+class RedactorCreateView(LoginRequiredMixin, generic.CreateView):
     model = Redactor
-    # form_class = RedactorCreationForm
+    form_class = RedactorCreationForm
     success_url = reverse_lazy("catalog:redactor-list")
 
 
-class DriverLicenseUpdateView(LoginRequiredMixin, generic.UpdateView):
+class RedactorExperienceUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Redactor
-    # form_class = RedactorLicenseUpdateForm
+    form_class = RedactorExperienceUpdateForm
     success_url = reverse_lazy("catalog:redactor-list")
 
 
@@ -166,7 +166,7 @@ class RedactorDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 
 @login_required
-def toggle_assign_to_car(request, pk):
+def toggle_assign_to_articles(request, pk):
     redactor = Redactor.objects.get(id=request.user.id)
     if (
         Article.objects.get(id=pk) in redactor.articles.all()
