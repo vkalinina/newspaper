@@ -86,17 +86,17 @@ class ArticleListView(LoginRequiredMixin, generic.ListView):
         self, *, object_list=None, **kwargs
     ):
         context = super(ArticleListView, self).get_context_data(**kwargs)
-        model = self.request.GET.get("model", "")
+        title = self.request.GET.get("title", "")
         context["search_form"] = ArticleSearchForm(
-            initial={"model": model}
+            initial={"title": title}
         )
         return context
 
     def get_queryset(self):
         queryset = Article.objects.select_related("topic")
-        model = self.request.GET.get("model")
-        if model:
-            return queryset.filter(model__icontains=model)
+        title = self.request.GET.get("title")
+        if title:
+            return queryset.filter(title__icontains=title)
         return queryset
 
 
