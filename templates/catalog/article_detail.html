@@ -1,0 +1,75 @@
+{% extends "layouts/base.html" %}
+{% load crispy_forms_filters %}
+{% block title %} Article List {% endblock %}
+
+{% block body_class %} index-page {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  {% include 'includes/navigation.html' %}
+
+  <div class="page-header min-vh-25" >
+    <span class="mask bg-gradient-dark opacity-6"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="text-center">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
+    <div class="container">
+      <div class="section ">
+        <div class=" section text-center">
+          <h1>
+            {{ article.model }}
+            <a href="{% url 'catalog:article-delete' pk=article.id %}" class="btn btn-danger link-to-page">
+              Delete
+            </a>
+
+            <a href="{% url 'catalog:article-update' pk=article.id %}" class="btn btn-secondary link-to-page">
+              Update
+            </a>
+          </h1>
+          <h1>{{ article.title }}</h1>
+        </div>
+
+        <p><i>Topic: <b>{{ article.topic.name }}</b></i></p>
+        <p><i>Published date: <b>{{ article.published_date }}</b></i></p>
+        <br>
+        <p><b>Content:</b></p>
+        <p>{{ article.content }}</p>
+        <h3>
+          Redactors
+
+          {% if article in user.articles.all %}
+            <a href="{% url 'catalog:toggle-article-assign' pk=article.id %}" class="btn btn-danger link-to-page">
+              Delete me from this article
+            </a>
+          {% else %}
+            <a href="{% url 'catalog:toggle-article-assign' pk=article.id %}" class="btn btn-success link-to-page">
+              Assign me to this article
+            </a>
+          {% endif %}
+
+        </h3>
+        <hr>
+        <ul>
+          {% for redactor in article.redactors.all %}
+            <li>{{ redactor.username }} ({{ redactor.first_name }} {{ redactor.last_name }})</li>
+          {% endfor %}
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
