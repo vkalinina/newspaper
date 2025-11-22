@@ -12,7 +12,8 @@ from .forms import (
     ArticleForm,
     RedactorSearchForm,
     ArticleSearchForm,
-    TopicSearchForm
+    TopicSearchForm,
+    TopicForm,
 )
 
 
@@ -63,13 +64,13 @@ class TopicListView(LoginRequiredMixin, generic.ListView):
 
 class TopicCreateView(LoginRequiredMixin, generic.CreateView):
     model = Topic
-    fields = "__all__"
+    form_class = TopicForm
     success_url = reverse_lazy("catalog:topic-list")
 
 
 class TopicUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Topic
-    fields = "__all__"
+    form_class = TopicForm
     success_url = reverse_lazy("catalog:topic-list")
 
 
@@ -157,6 +158,7 @@ class RedactorCreateView(LoginRequiredMixin, generic.CreateView):
 class RedactorExperienceUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Redactor
     form_class = RedactorExperienceUpdateForm
+    template_name = "catalog/redactor_update.html"
     success_url = reverse_lazy("catalog:redactor-list")
 
 
@@ -174,5 +176,6 @@ def toggle_assign_to_articles(request, pk):
         redactor.articles.remove(pk)
     else:
         redactor.articles.add(pk)
-    return HttpResponseRedirect(reverse_lazy("catalog:article-detail", args=[pk]))
-
+    return HttpResponseRedirect(
+        reverse_lazy("catalog:article-detail", args=[pk])
+    )
