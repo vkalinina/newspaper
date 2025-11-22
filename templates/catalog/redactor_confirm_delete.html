@@ -1,10 +1,42 @@
-{% extends "base.html" %}
+{% extends "layouts/base.html" %}
+{% load crispy_forms_filters %}
+{% block title %} Redactor delete {% endblock %}
+
+{% block body_class %} index-page {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
-  <h1>Delete redactor?</h1>
-  <form action="" method="post">
-    {% csrf_token %}
 
-    <input type="submit" value="Yes" class="btn btn-danger">
-  </form>
-{% endblock %}
+  {% include 'includes/navigation.html' %}
+
+  <div class="page-header min-vh-25" >
+    <span class="mask bg-gradient-dark opacity-6"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="text-center">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
+    <div class="container">
+      <div class="section text-center">
+        <h1>Delete redactor?</h1>
+        <h3><i> {{ redactor.username }}</i></h3>
+          <form action="" method="post">
+            {% csrf_token %}
+
+            <input type="submit" value="Yes" class="btn btn-danger">
+          </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
