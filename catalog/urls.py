@@ -16,7 +16,7 @@ from .views import (
     TopicCreateView,
     TopicUpdateView,
     TopicDeleteView,
-    toggle_assign_to_articles,
+    ToggleAssignToArticlesView,
 )
 
 urlpatterns = [
@@ -56,7 +56,7 @@ urlpatterns = [
     ),
     path(
         "articles/<int:pk>/toggle-assign/",
-        toggle_assign_to_articles,
+        ToggleAssignToArticlesView.as_view(),
         name="toggle-article-assign",
     ),
     path("redactors/", RedactorListView.as_view(), name="redactor-list"),

@@ -48,13 +48,15 @@
           Redactors
 
           {% if article in user.articles.all %}
-            <a href="{% url 'catalog:toggle-article-assign' pk=article.id %}" class="btn btn-danger link-to-page">
-              Delete me from this article
-            </a>
+            <form method="post" action="{% url 'catalog:toggle-article-assign' pk=article.pk %}">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-danger link-to-page">Delete me from this article</button>
+            </form>
           {% else %}
-            <a href="{% url 'catalog:toggle-article-assign' pk=article.id %}" class="btn btn-success link-to-page">
-              Assign me to this article
-            </a>
+            <form method="post" action="{% url 'catalog:toggle-article-assign' pk=article.pk %}">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-success link-to-page">Assign me from this article</button>
+            </form>
           {% endif %}
 
         </h3>
