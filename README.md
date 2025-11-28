@@ -11,10 +11,9 @@
 
 Newspaper Management System is a full-featured web platform for managing newspaper editorial operations. The system enables efficient organization of editorial work, topic management, and article publication through a modern and intuitive interface based on Django Material Kit.
 
-✨![View Website ](https://newspaper-system.onrender.com)
+[View Website] (https://newspaper-system.onrender.com) https://newspaper-system.onrender.com
 login: test
 password: password333
-
 
 
 ### ✨ Key Features
@@ -306,7 +305,7 @@ Project Link: [https://github.com/vkalinina/newspaper](https://github.com/vkalin
 - [Material Kit Documentation](https://demos.creative-tim.com/material-kit/docs/2.0/getting-started/introduction.html)
 - [Django Best Practices](https://django-best-practices.readthedocs.io/)
 
-##   📸 Demo
+##   Demo
 
 ![Website Interface](demo_01.png)
 ![Website Interface](demo_03.png)
