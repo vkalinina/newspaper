@@ -11,6 +11,11 @@
 
 Newspaper Management System is a full-featured web platform for managing newspaper editorial operations. The system enables efficient organization of editorial work, topic management, and article publication through a modern and intuitive interface based on Django Material Kit.
 
+[View Website] (https://newspaper-system.onrender.com) https://newspaper-system.onrender.com
+login: test
+password: password333
+
+
 ### ✨ Key Features
 
 - 👥 **Redactor Management** - Create profiles, track years of experience
