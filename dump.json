@@ -1,0 +1,412 @@
+[
+{
+    "model": "catalog.topic",
+    "pk": 1,
+    "fields": {
+        "name": "Technology"
+    }
+},
+{
+    "model": "catalog.topic",
+    "pk": 2,
+    "fields": {
+        "name": "Politics"
+    }
+},
+{
+    "model": "catalog.topic",
+    "pk": 3,
+    "fields": {
+        "name": "Economy"
+    }
+},
+{
+    "model": "catalog.topic",
+    "pk": 4,
+    "fields": {
+        "name": "Science"
+    }
+},
+{
+    "model": "catalog.topic",
+    "pk": 5,
+    "fields": {
+        "name": "Sports"
+    }
+},
+{
+    "model": "catalog.topic",
+    "pk": 6,
+    "fields": {
+        "name": "Culture"
+    }
+},
+{
+    "model": "catalog.topic",
+    "pk": 7,
+    "fields": {
+        "name": "Health"
+    }
+},
+{
+    "model": "catalog.topic",
+    "pk": 9,
+    "fields": {
+        "name": "Environment"
+    }
+},
+{
+    "model": "catalog.topic",
+    "pk": 10,
+    "fields": {
+        "name": "Education"
+    }
+},
+{
+    "model": "catalog.redactor",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$rIY5OZtBfpavkgeiDOeqyW$HVZF9fDE5Cm/GfjYl3pDxENGaDRD+YX5EaaOUCV3LFI=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "Admin",
+        "last_name": "User",
+        "email": "admin@newspaper.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-18T13:00:05.305Z",
+        "years_of_experience": 20,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "catalog.redactor",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$AaR92gK0WCsoWkTmKKHxtw$dDZRiRMTuF0cid3fn6f1uQVGjkffrdFk6JKVVzoNsq4=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "john_smith",
+        "first_name": "John",
+        "last_name": "Smith",
+        "email": "john.smith@newspaper.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-11-18T13:00:05.396Z",
+        "years_of_experience": 10,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "catalog.redactor",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$5ly4Oxr0HjMyOfCXJ30VXc$5EGdffsXthMHCoTFb+3DTFKsRWMFbQ3Rs6zOr/uojyY=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "emily_johnson",
+        "first_name": "Emily",
+        "last_name": "Johnson",
+        "email": "emily.johnson@newspaper.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-11-18T13:00:05.490Z",
+        "years_of_experience": 7,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "catalog.redactor",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$kXuUgqzlrjhccb2pyyrO7o$Bsmwo/xJPDNqOCXVvyfJkxR0uvhZXIswUmMF04hkkus=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "michael_brown",
+        "first_name": "Michael",
+        "last_name": "Brown",
+        "email": "michael.brown@newspaper.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-11-18T13:00:05.582Z",
+        "years_of_experience": 15,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "catalog.redactor",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$kLkPFmg8vlgR0Cxn97kkR9$g7ni1ss6X0XBfIp3gehhPUaHwe7rJehDl/VFOpPEwdg=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "sarah_davis",
+        "first_name": "Sarah",
+        "last_name": "Davis",
+        "email": "sarah.davis@newspaper.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-11-18T13:00:05.673Z",
+        "years_of_experience": 5,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "catalog.redactor",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$X4q3HeNzz4fFz4BLV9pDrt$sESBHRisMIlJDnz74vDzit2SSFEPbhd3PawR2PpM+I0=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "david_wilson",
+        "first_name": "David",
+        "last_name": "Wilson",
+        "email": "david.wilson@newspaper.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-11-18T13:00:05.765Z",
+        "years_of_experience": 12,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "catalog.redactor",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$y0utHucUGYHt2j9KnQMRge$SJnw1KBT8P/sm0tsTGhQaubT20lFZHjfC0NDmqekcZA=",
+        "last_login": "2025-11-26T05:11:42.972Z",
+        "is_superuser": true,
+        "username": "vik",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-18T13:12:55.234Z",
+        "years_of_experience": 11,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "catalog.redactor",
+    "pk": 13,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$vkexqfT6gE4j7dspUZovc1$LbrsxsI66UTVR/6Ht/wrUl+2Gigc9sz1esKWUtQ63RE=",
+        "last_login": "2025-11-23T13:36:38.714Z",
+        "is_superuser": false,
+        "username": "test",
+        "first_name": "Test",
+        "last_name": "For Viewing",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-11-22T14:36:07.104Z",
+        "years_of_experience": 30,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 1,
+    "fields": {
+        "title": "Artificial Intelligence Reshaping the Tech Industry",
+        "content": "Artificial intelligence continues to revolutionize the technology sector. \n        New machine learning models demonstrate impressive results in natural language processing,\n        computer vision, and process automation. Experts predict that in the coming years, AI will become\n        an integral part of people's daily lives, transforming industries from healthcare to finance.",
+        "published_date": "2025-10-26",
+        "topic": 1,
+        "redactors": [
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 2,
+    "fields": {
+        "title": "Quantum Computers: A Breakthrough in Computing",
+        "content": "Researchers have reached a new milestone in quantum computer development.\n        The new architecture allows for a significant increase in the number of qubits and reduction in error rates.\n        This opens the way to solving complex problems in cryptography, molecular modeling, and optimization.\n        Major tech companies are investing billions in quantum computing research.",
+        "published_date": "2025-10-28",
+        "topic": 4,
+        "redactors": [
+            5
+        ]
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 3,
+    "fields": {
+        "title": "Global Economy: Trends for 2025",
+        "content": "Analysts note steady growth in the global economy in 2025.\n        The main growth drivers are the technology sector and renewable energy.\n        However, risks remain related to geopolitical tensions and inflation.\n        Emerging markets show particularly strong performance this quarter.",
+        "published_date": "2025-10-30",
+        "topic": 3,
+        "redactors": [
+            6,
+            8
+        ]
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 4,
+    "fields": {
+        "title": "Olympic Games: New Records and Achievements",
+        "content": "At the Olympic Games, numerous new world records were set.\n        Athletes demonstrate outstanding results thanks to modern training methods\n        and sports technologies. Particularly impressive were achievements in athletics and swimming.\n        The host nation celebrates unprecedented medal success.",
+        "published_date": "2025-11-17",
+        "topic": 5,
+        "redactors": [
+            3,
+            7
+        ]
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 5,
+    "fields": {
+        "title": "New Contemporary Art Exhibition Opens at Museum",
+        "content": "A large-scale contemporary art exhibition has opened at the city museum.\n        The exhibition presents works by more than 50 artists from different countries.\n        Visitors can explore various movements: from abstractionism to digital art.\n        Interactive installations allow audience participation in the creative process.",
+        "published_date": "2025-10-13",
+        "topic": 6,
+        "redactors": [
+            4,
+            6,
+            8
+        ]
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 6,
+    "fields": {
+        "title": "Breakthrough in Cancer Treatment Research",
+        "content": "Scientists have developed a new immunotherapy method for cancer treatment.\n        Clinical trials showed high effectiveness of the new approach with minimal side effects.\n        This gives hope to millions of patients worldwide. The treatment targets specific cancer cells\n        while preserving healthy tissue, marking a significant advancement in oncology.",
+        "published_date": "2025-10-19",
+        "topic": 7,
+        "redactors": [
+            5,
+            7
+        ]
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 8,
+    "fields": {
+        "title": "Climate Change: Challenges and Solutions",
+        "content": "The international climate summit has developed new strategies to combat global warming.\n        Countries agreed to accelerate the transition to renewable energy sources\n        and reduce greenhouse gas emissions. Experts consider these measures critically important\n        for the planet's future. New technologies in carbon capture show promising results.",
+        "published_date": "2025-10-19",
+        "topic": 9,
+        "redactors": [
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 9,
+    "fields": {
+        "title": "Digital Transformation in Business",
+        "content": "Companies worldwide are actively implementing digital technologies.\n        Cloud solutions, big data, and process automation are becoming the standard for modern business.\n        This allows for increased efficiency and competitiveness. Small businesses are also\n        embracing digital tools, leveling the playing field with larger corporations.",
+        "published_date": "2025-10-23",
+        "topic": 1,
+        "redactors": [
+            4,
+            7
+        ]
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 10,
+    "fields": {
+        "title": "Education System Reform Announced",
+        "content": "The government has announced a large-scale reform of the educational system.\n        The main focus is on developing critical thinking and practical skills.\n        Plans also include strengthening the role of digital technologies in the educational process.\n        Teachers will receive additional training in modern pedagogical methods.",
+        "published_date": "2025-11-03",
+        "topic": 10,
+        "redactors": [
+            6,
+            7,
+            8
+        ]
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 11,
+    "fields": {
+        "title": "Cybersecurity Threats on the Rise",
+        "content": "Cybersecurity experts warn of increasing sophistication in cyberattacks.\n        Organizations must implement robust security measures and employee training programs.\n        The rise of AI-powered attacks requires equally advanced defensive strategies.\n        Investment in cybersecurity infrastructure has become critical for all businesses.",
+        "published_date": "2025-11-08",
+        "topic": 1,
+        "redactors": [
+            5
+        ]
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 12,
+    "fields": {
+        "title": "Renewable Energy Reaches New Milestone",
+        "content": "Renewable energy sources now account for over 40% of global electricity generation.\n        Solar and wind power costs continue to decline, making them competitive with fossil fuels.\n        Battery storage technology improvements enable 24/7 renewable power supply.\n        Governments worldwide are setting ambitious clean energy targets for 2030.",
+        "published_date": "2025-10-25",
+        "topic": 9,
+        "redactors": [
+            3,
+            5
+        ]
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 13,
+    "fields": {
+        "title": "Global Food Security Initiative Launched",
+        "content": "International organizations launch comprehensive food security program.\n        The initiative focuses on sustainable agriculture and reducing food waste.\n        Innovative farming techniques promise to increase yields while protecting the environment.\n        Collaboration between developed and developing nations is key to program success.",
+        "published_date": "2025-10-17",
+        "topic": 3,
+        "redactors": [
+            6,
+            7
+        ]
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 14,
+    "fields": {
+        "title": "Mental Health Awareness Campaign Goes Viral",
+        "content": "A new mental health awareness campaign has reached millions worldwide.\n        The initiative aims to reduce stigma and encourage people to seek help.\n        Mental health professionals report increased demand for services.\n        Workplace wellness programs are becoming standard practice in major corporations.",
+        "published_date": "2025-10-23",
+        "topic": 7,
+        "redactors": [
+            4,
+            5
+        ]
+    }
+},
+{
+    "model": "catalog.article",
+    "pk": 15,
+    "fields": {
+        "title": "Championship Finals Draw Record Viewership",
+        "content": "The championship finals attracted the largest television audience in history.\n        Spectacular performances and dramatic moments captivated viewers globally.\n        Social media engagement broke all previous records during the event.\n        The economic impact on the host city exceeded initial projections.",
+        "published_date": "2025-11-12",
+        "topic": 5,
+        "redactors": [
+            3
+        ]
+    }
+}
+]

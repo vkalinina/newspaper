@@ -1,8 +1,8 @@
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views import generic
+from django.views import View
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Redactor, Article, Topic
@@ -167,15 +167,14 @@ class RedactorDeleteView(LoginRequiredMixin, generic.DeleteView):
     success_url = reverse_lazy("catalog:redactor-list")
 
 
-@login_required
-def toggle_assign_to_articles(request, pk):
-    redactor = Redactor.objects.get(id=request.user.id)
-    if (
-        Article.objects.get(id=pk) in redactor.articles.all()
-    ):  # probably could check if car exists
-        redactor.articles.remove(pk)
-    else:
-        redactor.articles.add(pk)
-    return HttpResponseRedirect(
-        reverse_lazy("catalog:article-detail", args=[pk])
-    )
+class ToggleAssignToArticlesView(LoginRequiredMixin, View):
+    def post(self, request, pk):
+        redactor = get_object_or_404(Redactor, id=request.user.id)
+        article = get_object_or_404(Article, id=pk)
+
+        if article in redactor.articles.all():
+            redactor.articles.remove(article)
+        else:
+            redactor.articles.add(article)
+
+        return redirect("catalog:article-detail", pk=pk)

@@ -300,6 +300,21 @@ Project Link: [https://github.com/vkalinina/newspaper](https://github.com/vkalin
 - [Material Kit Documentation](https://demos.creative-tim.com/material-kit/docs/2.0/getting-started/introduction.html)
 - [Django Best Practices](https://django-best-practices.readthedocs.io/)
 
+##   Demo
+
+![Website Interface](demo_01.png)
+![Website Interface](demo_03.png)
+![Website Interface](demo_04.png)
+![Website Interface](demo_05.png)
+![Website Interface](demo_06.png)
+![Website Interface](demo_07.png)
+![Website Interface](demo_08.png)
+![Website Interface](demo_09.png)
+![Website Interface](demo_10.png)
+![Website Interface](demo_11.png)
+![Website Interface](demo_12.png)
+
+
 ---
 
 ⭐️ If you found this project helpful, please give it a star on GitHub!
