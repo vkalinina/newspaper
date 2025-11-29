@@ -11,7 +11,7 @@
 
 Newspaper Management System is a full-featured web platform for managing newspaper editorial operations. The system enables efficient organization of editorial work, topic management, and article publication through a modern and intuitive interface based on Django Material Kit.
 
-[View Website] (https://newspaper-system.onrender.com) https://newspaper-system.onrender.com
+### [View Website](https://newspaper-system.onrender.com) https://newspaper-system.onrender.com
 login: test
 password: password333
 
@@ -307,17 +307,17 @@ Project Link: [https://github.com/vkalinina/newspaper](https://github.com/vkalin
 
 ##   Demo
 
-![Website Interface](demo_01.png)
-![Website Interface](demo_03.png)
-![Website Interface](demo_04.png)
-![Website Interface](demo_05.png)
-![Website Interface](demo_06.png)
-![Website Interface](demo_07.png)
-![Website Interface](demo_08.png)
-![Website Interface](demo_09.png)
-![Website Interface](demo_10.png)
-![Website Interface](demo_11.png)
-![Website Interface](demo_12.png)
+![Website Interface](demo_screenshots/demo_01.png)
+![Website Interface](demo_screenshots/demo_03.png)
+![Website Interface](demo_screenshots/demo_04.png)
+![Website Interface](demo_screenshots/demo_05.png)
+![Website Interface](demo_screenshots/demo_06.png)
+![Website Interface](demo_screenshots/demo_07.png)
+![Website Interface](demo_screenshots/demo_08.png)
+![Website Interface](demo_screenshots/demo_09.png)
+![Website Interface](demo_screenshots/demo_10.png)
+![Website Interface](demo_screenshots/demo_11.png)
+![Website Interface](demo_screenshots/demo_12.png)
 
 
 ---
